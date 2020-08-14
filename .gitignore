@@ -150,5 +150,6 @@ dmypy.json
 /media
 .DS_Store
 /.vscode
-
-# End of https://www.toptal.com/developers/gitignore/api/django
+.DS_Store?
+.vscode?
+# End of https://www.toptal.com/developers/gitignore/api/django.DS_Store
