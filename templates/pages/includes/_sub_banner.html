@@ -1,0 +1,25 @@
+{% load static %}
+
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1> 
+            {% if not page_main_title %}
+                Main Title Placeholder
+            {% else %}
+                {{ page_main_title|title }} 
+            {% endif %}
+            </h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li class="active"> 
+                    {% if not page_sub_title %}
+                        Sub Title Placeholder
+                    {% else %}
+                        {{ page_sub_title|title }} 
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

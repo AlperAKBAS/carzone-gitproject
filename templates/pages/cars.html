@@ -1,0 +1,13 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+
+{% block content %}
+<!-- Sub banner start -->
+{% include "pages/includes/_sub_banner.html" with page_main_title=main_title page_sub_title=sub_title %}
+<!-- Sub Banner end -->
+
+<!-- Featured car start -->
+{% include "pages/includes/_featured_car2.html" %}
+<!-- Featured car end -->
+{% endblock content %}
