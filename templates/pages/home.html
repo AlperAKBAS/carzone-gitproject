@@ -16,7 +16,9 @@
     <!-- Rent car end -->
 
     <!-- Our team start -->
-    {% include "pages/includes/_team.html" %}
+    {% if team %}
+        {% include "pages/includes/_team.html" with team=team %}
+    {% endif %}
     <!-- Our team end -->
 
     <!-- Car Overview Modal -->
