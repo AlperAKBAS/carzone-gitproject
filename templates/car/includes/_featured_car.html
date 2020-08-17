@@ -1,0 +1,95 @@
+{% load static %}
+{% load humanize %}
+
+<div class="featured-car content-area-5">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Featured <span>Cars</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <!-- Slick slider area start -->
+        <div class="slick-slider-area clearfix">
+            <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+            <!-- Featured Car Injection Starts Here -->
+            {% for car in featured_cars  %}
+                <div class="slick-slide-item">
+                    <div class="car-box-3">
+                        <div class="car-thumbnail">
+                            <a href="car-details.html" class="car-img">
+                                <div class="tag-2">Featured</div>
+                                <div class="price-box">
+                                    <span class="del"><del>${{car.price|add:car.price|intcomma}}</del></span>
+                                    <br>
+                                    <span>${{car.price|intcomma}}</span>
+                                </div>
+                                <img class="d-block w-100" src="{{car.car_photo.url}}" alt="car" style="min-height: 262px; max-height: 262px;">
+                            </a>
+                            <div class="carbox-overlap-wrapper">
+                                <div class="overlap-box">
+                                    <div class="overlap-btns-area">
+                                        <div class="car-magnify-gallery">
+
+                                            <a href="{{car.car_photo.url}}" class="overlap-btn" data-sub-html="<h4>{{car.car_title}}</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
+                                                <i class="fa fa-expand"></i>
+                                                <img class="hidden" src="{{car.car_photo.url}}" alt="hidden-img">
+                                            </a>
+                                            {% if not 'default.jpg' in car.car_photo_1.url %}    
+                                            <a href="{{car.car_photo_1.url}}" class="hidden" data-sub-html="<h4>{{car.car_title}}</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
+                                                <img class="hidden" src="{{car.car_photo_1.url}}" alt="hidden-img">
+                                            </a>
+                                            {% endif %}
+                                            {% if not 'default.jpg' in car.car_photo_2.url %} 
+                                            <a href="{{car.car_photo_2.url}}" class="hidden" data-sub-html="<h4>{{car.car_title}}</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
+                                                <img class="hidden" src="{{car.car_photo_2.url}}" alt="hidden-img">
+                                            </a>
+                                            {% endif %}
+                                            {% if not 'default.jpg' in car.car_photo_3.url %} 
+                                            <a href="{{car.car_photo_3.url}}" class="hidden" data-sub-html="<h4>{{car.car_title}}</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
+                                                <img class="hidden" src="{{car.car_photo_3.url}}" alt="hidden-img">
+                                            </a>
+                                            {% endif %}
+                                            {% if not 'default.jpg' in car.car_photo_4.url %} 
+                                            <a href="{{car.car_photo_4.url}}" class="hidden" data-sub-html="<h4>{{car.car_title}}</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
+                                                <img class="hidden" src="{{car.car_photo_4.url}}" alt="hidden-img">
+                                            </a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h1 class="title">
+                                <a href="car-details.html">{{car.car_title}}</a>
+                            </h1>
+                            <div class="location">
+                                <a href="car-details.html">
+                                    <i class="flaticon-pin"></i>{{car.state}}, {{car.city}}
+                                </a>
+                            </div>
+                            <ul class="facilities-list clearfix">
+                                <li>{{car.fuel_type}}</li>
+                                <li>{{car.milage|intcomma}} km</li>
+                                <li>{{car.transmission}}</li>
+                                <li>{{car.body_style}}</li>
+                                <li>{{car.color}}</li>
+                                <li>{{car.year}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <!-- Featured Car Injection Ends Here -->
+            </div>
+            <div class="slick-btn">
+                <div class="slick-prev slick-arrow-buton sab-4">
+                    <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="slick-next slick-arrow-buton sab-3">
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

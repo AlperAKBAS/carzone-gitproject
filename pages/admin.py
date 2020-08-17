@@ -9,7 +9,7 @@ class TeamAdmin(admin.ModelAdmin):
             f'<img src="{object.photo.url}" width="60" style="border-radius: 50%"/>'
         )
 
-    thumbnail.shot_description = 'Photo'
+    thumbnail.short_description = 'Photo'
 
     list_display = ('id', 'thumbnail', 'first_name', 'last_name', 'designation', 'created_date')
     list_display_links = ['id', 'thumbnail']

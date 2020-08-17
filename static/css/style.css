@@ -7165,7 +7165,7 @@ table {
 .tabbing-box .nav-tabs {
     border-bottom: none;
     background: #fff;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 35px rgba(206, 147, 147, 0.1);
 }
 
 .tabbing-box .nav-tabs .nav-link {

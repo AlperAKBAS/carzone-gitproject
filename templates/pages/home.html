@@ -1,6 +1,8 @@
 {% extends "pages/base.html" %}
 {% load static %}
 
+
+
 {% block content %}
 
     <!-- Banner start -->
@@ -8,11 +10,11 @@
     <!-- Banner end -->
 
     <!-- Featured car start -->
-    {% include "pages/includes/_featured_car.html" %}
+    {% include "car/includes/_featured_car.html" with featured_cars=featured_cars %}
     <!-- Featured car end -->
 
     <!-- Rent car start -->
-    {% include "pages/includes/_rent_a_car.html" %}
+    {% include "car/includes/_rent_a_car.html" with latest_cars=latest_cars%}
     <!-- Rent car end -->
 
     <!-- Our team start -->
@@ -22,7 +24,7 @@
     <!-- Our team end -->
 
     <!-- Car Overview Modal -->
-    {% include "pages/includes/_car_overview_modal.html" %}
+    {% include "car/includes/_car_overview_modal.html" %}
 
 
     <!-- Intro section start -->

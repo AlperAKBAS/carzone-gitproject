@@ -21,6 +21,7 @@ from django.conf.urls.static import static ## ADDED
 urlpatterns = [
     path('', include('pages.urls')),
     path('admin/', admin.site.urls),
+    path('cars/', include('car.urls')),
 ]
 
 if settings.DEBUG == True:
