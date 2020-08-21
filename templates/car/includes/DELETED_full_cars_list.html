@@ -1,11 +1,5 @@
-{% extends "pages/base.html" %}
-{% load static %}
+{% load static%}
 {% load humanize %}
-
-{% block content %}
-<!-- Sub banner start -->
-{% include "pages/includes/_sub_banner.html" with page_main_title=main_title page_sub_title=sub_title %}
-<!-- Sub Banner end -->
 
 <!-- Featured car start -->
 <div class="featured-car content-area">
@@ -119,6 +113,15 @@
                             <div class="form-group">
                                 <input type="text" name="keyword" placeholder="Search by name" class="form-control">
                             </div>
+                            {% comment %} <div class="form-group">
+                                <select class="form-control search-fields" name="select-brand">
+                                    <option selected="true" disabled="disabled">Brand</option>
+                                    <option>Audi</option>
+                                    <option>BMW</option>
+                                    <option>Honda</option>
+                                    <option>Nissan</option>
+                                </select>
+                            </div> {% endcomment %}
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-model">
                                     <option selected="true" disabled="disabled">Model</option>
@@ -183,5 +186,3 @@
         </div>
     </div>
 </div>
-<!-- Featured car end -->
-{% endblock content %}
